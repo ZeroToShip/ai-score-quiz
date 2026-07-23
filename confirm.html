@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+
+<header class="hero" style="padding-bottom: 5rem;">
+  <div class="container">
+    <span class="section-label">You're in</span>
+    <h1 id="confirm-heading">See you soon.</h1>
+    <p class="lead" id="confirm-lead">Your seat is reserved. Here's everything you need, and nothing you don't.</p>
+
+    <div class="details-block">
+      <div>
+        <label>Date</label>
+        <span id="event-date">TBC</span>
+      </div>
+      <div>
+        <label>Time</label>
+        <span id="event-time">TBC</span>
+      </div>
+      <div>
+        <label>Platform</label>
+        <span id="event-platform">TBC</span>
+      </div>
+      <div>
+        <label>Length</label>
+        <span>2 hours</span>
+      </div>
+    </div>
+
+    <a href="#" id="calendar-link" class="btn btn-primary btn-large">Add to calendar</a>
+  </div>
+</header>
+
+<section>
+  <div class="container" style="max-width: 640px;">
+    <span class="section-label">What's next</span>
+    <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">I'll be in touch before the day.</h2>
+    <p style="color: var(--gray-text); margin-bottom: 1rem;">
+      A short note is on its way with one thing to prepare, and a couple of questions that help me shape the session around the room. Nothing to do right now.
+    </p>
+    <p style="color: var(--gray-text);">
+      If anything changes on your end, just reply to the confirmation email. That reaches Agnes directly.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>AI Tools Assessment · Zero to Launch</p>
+  </div>
+</footer>
+
+<script>
+  // Event config: keep in sync with index.html for each cohort.
+  const EVENT = {
+    date: "Set event date here",
+    time: "Set event time (EAT) here",
+    platform: "Zoom",
+    calendarLink: "#"
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get('name');
+
+  if (name) {
+    document.getElementById('confirm-heading').textContent = 'You\'re in, ' + name + '.';
+  }
+
+  document.getElementById('event-date').textContent = EVENT.date;
+  document.getElementById('event-time').textContent = EVENT.time;
+  document.getElementById('event-platform').textContent = EVENT.platform;
+  document.getElementById('calendar-link').href = EVENT.calendarLink;
+</script>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+
+:root {
+  --cream: #FAF7F4;
+  --ink: #191919;
+  --coral: #DE7356;
+  --coral-dark: #C4603F;
+  --sand: #D4A27F;
+  --sand-light: #EDD9C5;
+  --white: #FFFFFF;
+  --gray-bg: #F2EDE8;
+  --gray-border: #E8E0D8;
+  --gray-text: #6B5F57;
+  --gray-mid: #A8998F;
+  --body-text: #2D2420;
+  --success: #2D7A5A;
+  --error: #C0392B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--body-text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section { padding: 6rem 0; }
+
+@media (max-width: 640px) {
+  section { padding: 4rem 0; }
+}
+
+.section-label {
+  display: block;
+  font: 700 0.78rem 'DM Sans';
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 1rem;
+}
+
+.hero {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 88% 12%, rgba(212,162,127,0.20), transparent 42%),
+    radial-gradient(rgba(25,25,25,0.05) 1px, transparent 1.4px);
+  background-size: auto, 22px 22px;
+  border-bottom: 1px solid var(--gray-border);
+  padding-top: 5rem;
+}
+
+.hero h1 { font-size: 2.75rem; max-width: 720px; }
+.hero .highlight { color: var(--sand); font-style: italic; }
+.hero p.lead { font-size: 1.15rem; color: var(--gray-text); max-width: 560px; margin: 1.5rem 0 2rem; }
+
+.bg-alt { background: var(--gray-bg); }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(25,25,25,0.07);
+  transition: box-shadow 0.2s ease;
+}
+.card:hover { box-shadow: 0 8px 40px rgba(25,25,25,0.11); }
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 800px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+.btn {
+  display: inline-block;
+  font: 700 0.9rem 'DM Sans';
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background: var(--coral);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--coral-dark);
+  box-shadow: 0 6px 20px rgba(222,115,86,0.35);
+}
+.btn-large { font-size: 1.1rem; padding: 1.05rem 2.5rem; }
+
+.details-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+.details-block div label {
+  display: block;
+  font: 700 0.78rem 'DM Sans';
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 0.25rem;
+}
+.details-block div span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+form.registration {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px rgba(25,25,25,0.07);
+}
+.field { margin-bottom: 1.25rem; }
+.field label {
+  display: block;
+  font: 700 0.85rem 'DM Sans';
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  font: 500 1rem 'DM Sans';
+  color: var(--body-text);
+  background: var(--cream);
+}
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+.field.checkbox { display: flex; align-items: flex-start; gap: 0.6rem; }
+.field.checkbox input { margin-top: 0.3rem; }
+.field.checkbox label { font-weight: 400; font-size: 0.9rem; color: var(--gray-text); }
+
+.form-error {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  display: none;
+}
+
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--gray-border);
+  color: var(--gray-mid);
+  font-size: 0.9rem;
+}
