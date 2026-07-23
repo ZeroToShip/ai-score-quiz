@@ -1,0 +1,162 @@
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+
+<header class="hero">
+  <div class="container">
+    <span class="section-label">Free virtual workshop</span>
+    <h1>See where AI could save you real time, <span class="highlight">in one sitting.</span></h1>
+    <p class="lead">For career professionals and small business owners who sense AI could help, but don't have the time or background to figure out where to start.</p>
+    <a href="#register" class="btn btn-primary btn-large">Reserve my seat</a>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <span class="section-label">Who this is for</span>
+    <h2 style="max-width: 640px; font-size: 2rem;">You don't need to know how to code. You need to know where to start.</h2>
+    <p style="max-width: 640px; margin-top: 1rem; color: var(--gray-text); font-size: 1.05rem;">
+      Most weeks have one task that takes longer than it should. Scheduling, follow-ups, reports, admin. You've probably heard AI could help with it. What's missing isn't interest, it's a clear, honest read on which tool fits your actual situation, and what it would take to put it to work.
+    </p>
+  </div>
+</section>
+
+<section class="bg-alt">
+  <div class="container">
+    <span class="section-label">What you'll walk away with</span>
+    <h2 style="font-size: 2rem; margin-bottom: 2rem;">Three things, nothing more.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">One task, examined live</h3>
+        <p style="color: var(--gray-text);">Bring a real task that eats your week. We'll look at it together, in the room, not in the abstract.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">A clear next step</h3>
+        <p style="color: var(--gray-text);">One recommendation you can act on this week, not a long list of tools to research later.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">An honest read</h3>
+        <p style="color: var(--gray-text);">Whether a deeper, paid assessment of your full workload is worth it for you. No pressure either way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="section-label">The details</span>
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">One sitting. Free. Fully virtual.</h2>
+    <div class="details-block">
+      <div>
+        <label>Date</label>
+        <span id="event-date">TBC</span>
+      </div>
+      <div>
+        <label>Time</label>
+        <span id="event-time">TBC</span>
+      </div>
+      <div>
+        <label>Platform</label>
+        <span id="event-platform">TBC</span>
+      </div>
+      <div>
+        <label>Length</label>
+        <span>2 hours</span>
+      </div>
+    </div>
+    <p style="color: var(--gray-text); max-width: 600px;">
+      The workshop itself is free. If it's useful and you want to go further, the next step is a paid AI Tools Assessment: a full diagnostic report mapped to your specific pain points. Pricing is in Kenyan shillings and confirmed when you book that call, not before.
+    </p>
+  </div>
+</section>
+
+<section class="bg-alt" id="register">
+  <div class="container" style="max-width: 640px;">
+    <span class="section-label">Reserve your seat</span>
+    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Seats are limited to keep the room useful.</h2>
+    <form class="registration" id="registration-form">
+      <div class="field">
+        <label for="full_name">Full name</label>
+        <input type="text" id="full_name" name="full_name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="whatsapp_number">WhatsApp number (with country code)</label>
+        <input type="tel" id="whatsapp_number" name="whatsapp_number" placeholder="+254 7XX XXX XXX" required>
+      </div>
+      <div class="field">
+        <label for="audience_type">What best describes you</label>
+        <select id="audience_type" name="audience_type" required>
+          <option value="" disabled selected>Choose one</option>
+          <option value="career_professional">Career professional</option>
+          <option value="small_business_owner">Small business owner</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="biggest_challenge">Biggest work challenge right now</label>
+        <input type="text" id="biggest_challenge" name="biggest_challenge" placeholder="e.g. client scheduling takes hours every week" required>
+      </div>
+      <div class="field">
+        <label for="source_channel">How did you hear about this</label>
+        <select id="source_channel" name="source_channel" required>
+          <option value="" disabled selected>Choose one</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="whatsapp_community">WhatsApp community</option>
+          <option value="referral">Referral</option>
+          <option value="event">Event</option>
+          <option value="door_to_door">Someone spoke to me in person</option>
+        </select>
+      </div>
+      <div class="field checkbox">
+        <input type="checkbox" id="whatsapp_consent" name="whatsapp_consent" required>
+        <label for="whatsapp_consent">I'm okay receiving event reminders on WhatsApp</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-large" style="width: 100%; margin-top: 0.5rem;">Reserve my seat</button>
+      <p class="form-error" id="form-error">Please fill in every field before submitting.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>AI Tools Assessment · Zero to Launch</p>
+  </div>
+</footer>
+
+<script>
+  // Event config: update these two lines per cohort before publishing.
+  const EVENT = {
+    date: "Set event date here",
+    time: "Set event time (EAT) here",
+    platform: "Zoom"
+  };
+
+  document.getElementById('event-date').textContent = EVENT.date;
+  document.getElementById('event-time').textContent = EVENT.time;
+  document.getElementById('event-platform').textContent = EVENT.platform;
+
+  const form = document.getElementById('registration-form');
+  const errorEl = document.getElementById('form-error');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      errorEl.style.display = 'block';
+      return;
+    }
+    errorEl.style.display = 'none';
+
+    // Integration point: wire this to whichever registration tool is
+    // chosen in the Automation layer (funnel-runbook.md). That tool's
+    // webhook or export feeds sales/scripts/ingest_registration.py,
+    // which validates against sales/leads/schema.json and writes the
+    // lead record. This static site does not write files directly.
+    const data = Object.fromEntries(new FormData(form).entries());
+    console.log('Registration submitted', data);
+
+    window.location.href = 'confirm.html?name=' + encodeURIComponent(data.full_name || '');
+  });
+</script>
