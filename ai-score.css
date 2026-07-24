@@ -1,5 +1,41 @@
 .hero-compact { padding-top: 4rem; padding-bottom: 3rem; }
 
+.site-tagline {
+  display: block;
+  font: 700 0.85rem 'DM Sans';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 0.6rem;
+}
+
+.highlight-coral { color: var(--coral); font-style: italic; }
+
+.hero-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 2rem;
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray-border);
+}
+.hero-meta-strip div label {
+  display: block;
+  font: 700 0.78rem 'DM Sans';
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 0.35rem;
+}
+.hero-meta-strip div span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+@media (max-width: 800px) {
+  .hero-meta-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
 .quiz-card {
   background: var(--white);
   border: 1px solid var(--gray-border);
