@@ -1,9 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "ai-score-quiz.vercel.app" }],
-      "destination": "https://score.agnesmuthoni.com/:path*",
+      "destination": "https://score.agnesmuthoni.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "ai-score-quiz.vercel.app" }],
+      "destination": "https://score.agnesmuthoni.com/:path+",
       "permanent": true
     }
   ]
