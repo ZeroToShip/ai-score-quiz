@@ -5,11 +5,11 @@
   font: 700 0.85rem 'DM Sans';
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--navy);
   margin-bottom: 0.6rem;
 }
 
-.highlight-coral { color: var(--coral); font-style: italic; }
+.highlight-accent { color: var(--navy); font-style: italic; }
 
 .hero-meta-strip {
   display: grid;
@@ -24,7 +24,7 @@
   font: 700 0.78rem 'DM Sans';
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--navy);
   margin-bottom: 0.35rem;
 }
 .hero-meta-strip div span {
@@ -55,7 +55,7 @@
 }
 .progress-fill {
   height: 100%;
-  background: var(--coral);
+  background: var(--navy);
   transition: width 0.25s ease;
 }
 
@@ -87,7 +87,7 @@
   background: var(--sand-light);
 }
 .option-btn.selected {
-  border-color: var(--coral);
+  border-color: var(--navy);
   background: var(--sand-light);
   color: var(--ink);
   font-weight: 700;
@@ -106,7 +106,7 @@
   text-align: center;
   transition: all 0.2s ease;
 }
-.btn-secondary:hover { border-color: var(--coral); color: var(--coral-dark); }
+.btn-secondary:hover { border-color: var(--navy); color: var(--navy-dark); }
 
 .result-card { text-align: center; }
 .score-row { margin: 0.5rem 0 2rem; }

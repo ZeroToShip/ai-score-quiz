@@ -3,8 +3,8 @@
 :root {
   --cream: #FAF7F4;
   --ink: #191919;
-  --coral: #DE7356;
-  --coral-dark: #C4603F;
+  --navy: #1F3A5F;
+  --navy-dark: #152A45;
   --sand: #D4A27F;
   --sand-light: #EDD9C5;
   --white: #FFFFFF;
@@ -50,7 +50,7 @@ section { padding: 6rem 0; }
   font: 700 0.78rem 'DM Sans';
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--navy);
   margin-bottom: 1rem;
 }
 
@@ -100,12 +100,12 @@ section { padding: 6rem 0; }
   transition: all 0.2s ease;
 }
 .btn-primary {
-  background: var(--coral);
+  background: var(--navy);
   color: var(--white);
 }
 .btn-primary:hover {
-  background: var(--coral-dark);
-  box-shadow: 0 6px 20px rgba(222,115,86,0.35);
+  background: var(--navy-dark);
+  box-shadow: 0 6px 20px rgba(31,58,95,0.30);
 }
 .btn-large { font-size: 1.1rem; padding: 1.05rem 2.5rem; }
 
@@ -157,7 +157,7 @@ form.registration {
 }
 .field input:focus, .field select:focus {
   outline: none;
-  border-color: var(--coral);
+  border-color: var(--navy);
 }
 .field.checkbox { display: flex; align-items: flex-start; gap: 0.6rem; }
 .field.checkbox input { margin-top: 0.3rem; }
